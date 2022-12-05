@@ -1,17 +1,29 @@
 .message {
-
+    display: inline-block;
+    border: 1px solid black;
+    /*display: inline-block;*/
 }
 
 .imageAndText {
+    display: flex;
+    align-items: end;
+    padding: 10px 10px 0 10px;
 
 }
 
 .imageAndText img {
+    display: flex;
+    margin-right: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
 
 }
 
 .text {
-
+    background-color: beige;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .text:after {
@@ -27,5 +39,12 @@
 }
 
 .time {
+    /*width: 20px;*/
+    /*height: 30px;*/
+    padding-left: 10px;
+}
 
+.timeText {
+    font-size: 12px;
+    margin-left: 6px
 }
