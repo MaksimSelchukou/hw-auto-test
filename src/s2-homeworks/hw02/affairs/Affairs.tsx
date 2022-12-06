@@ -11,22 +11,22 @@ type AffairsPropsType = {
 }
 
 function Affairs(props: AffairsPropsType) {
-    // const setAll = () => {
-    //     // need to fix
-    //     props.setFilter('all')
-    // }
-    // const setHigh = () => {
-    //     // need to fix
-    //     props.setFilter('high')
-    // }
-    // const setMiddle = () => {
-    //     // need to fix
-    //     props.setFilter('middle')
-    // }
-    // const setLow = () => {
-    //     // need to fix
-    //     props.setFilter('low')
-    // }
+    const setAll = () => {
+        // need to fix
+        props.setFilter('all')
+    }
+    const setHigh = () => {
+        // need to fix
+        props.setFilter('high')
+    }
+    const setMiddle = () => {
+        // need to fix
+        props.setFilter('middle')
+    }
+    const setLow = () => {
+        // need to fix
+        props.setFilter('low')
+    }
     const setValue = (e: MouseEvent<HTMLButtonElement>) => {
         props.setFilter(e.currentTarget.value as FilterType)
     }
@@ -51,7 +51,7 @@ function Affairs(props: AffairsPropsType) {
                 <button
                     value={'all'}
                     id={'hw2-button-all'}
-                    onClick={setValue}
+                    onClick={setAll}
                     className={cnAll}
                 >
                     All
@@ -59,7 +59,7 @@ function Affairs(props: AffairsPropsType) {
                 <button
                     value={'high'}
                     id={'hw2-button-high'}
-                    onClick={setValue}
+                    onClick={setHigh}
                     className={cnHigh}
                 >
                     High
@@ -67,7 +67,7 @@ function Affairs(props: AffairsPropsType) {
                 <button
                     value={'middle'}
                     id={'hw2-button-middle'}
-                    onClick={setValue}
+                    onClick={setMiddle}
                     className={cnMiddle}
                 >
                     Middle
@@ -75,7 +75,7 @@ function Affairs(props: AffairsPropsType) {
                 <button
                     value={'low'}
                     id={'hw2-button-low'}
-                    onClick={setValue}
+                    onClick={setLow}
                     className={cnLow}
                 >
                     Low
