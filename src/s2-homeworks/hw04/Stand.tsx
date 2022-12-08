@@ -82,7 +82,8 @@ const Stand = () => {
                         checked={stateForAllCheckboxes}
                         onChangeChecked={setChecked}
                     >
-                        some text
+                        {/*some text*/}
+                        первый чекбокс
                     </SuperCheckbox>
                 </div>
                 {/*совместим со старым кодом:*/}
