@@ -9,6 +9,13 @@ type PropsType = {
     handleClose: () => void
 }
 
+
+// const switchLinkActive = (isActive: boolean) => {
+//     return (
+//         isActive ? 'active-link' : ''
+//     )
+// }
+
 export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
     const sidebarClass = s.sidebar
         + (open ? ' ' + s.open : '')
@@ -26,12 +33,17 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                     />
                 </button>
 
+
+                {/*<NavLink end className={({isActive}) => switchLinkActive(isActive)} to="/">Home</NavLink>*/}
+                {/*<NavLink className={({isActive}) => switchLinkActive(isActive)} to="/posts">Blog</NavLink>*/}
+                {/*<NavLink className={({isActive}) => switchLinkActive(isActive)} to="/about">About</NavLink>*/}
+
                 <nav id={'hw5-menu'} className={s.nav}>
                     <NavLink
                         id={'hw5-pre-junior-link'}
                         to={PATH.PRE_JUNIOR}
                         onClick={handleClose}
-                        // className={...} // делает студент
+                        className={({isActive}) => isActive ? s.col : ''} // делает студент
                     >
                         Pre-junior
                     </NavLink>
@@ -39,6 +51,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         id={'hw5-junior-link'}
                         to={PATH.JUNIOR}
                         onClick={handleClose}
+                        className={({isActive}) => isActive ? s.col : ''}
                         // className={...} // делает студент
                     >
                         Junior
@@ -47,6 +60,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         id={'hw5-junior-plus-link'}
                         to={PATH.JUNIOR_PLUS}
                         onClick={handleClose}
+                        className={({isActive}) => isActive ? s.col : ''}
                         // className={...} // делает студент
                     >
                         Junior Plus
