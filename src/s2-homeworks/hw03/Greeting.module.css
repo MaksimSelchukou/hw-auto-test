@@ -1,23 +1,41 @@
 .greetingForm {
+
 }
 
 .inputAndButtonContainer {
+    display: flex;
+    gap: 10px;
 }
 
 .error {
+    padding-top: 10px;
+    color: red;
 }
 
 .input {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
 }
 
 .input:focus {
+
 }
 
 .errorInput {
-    background-color: red;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid red;
 }
 
 .button {
+    width: 60px;
+    height: 30px;
+    background-color: #0059b3;
+    color: white;
+    border-radius: 10px;
+
 }
 
 .button:focus {
@@ -27,10 +45,22 @@
 }
 
 .button:disabled {
+    /*border: 1px solid #999999;*/
+    /*background-color: #cccccc;*/
+    /*color: #666666;*/
+    opacity: 15%;
 }
 
 .text {
+    padding-bottom: 10px;
+
+}
+
+.textDisabled {
+    padding-bottom: 10px;
+    opacity: 15%;
 }
 
 .greeting {
+    padding-top: 10px;
 }

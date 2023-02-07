@@ -1,4 +1,5 @@
 .sidebar {
+
 }
 
 .sidebar.open {
@@ -17,8 +18,9 @@
 .nav a:hover {
 }
 
-.nav a.active {
-}
+/*.nav a.active {*/
+/*    color: #cc0000;*/
+/*}*/
 
 .close {
 }
@@ -27,6 +29,12 @@
 }
 
 
-.col{
+.col {
     color: #cc0000;
 }
+
+
+.active {
+    color: red;
+}
+

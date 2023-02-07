@@ -25,11 +25,11 @@ const Greeting: React.FC<GreetingPropsType> = (
         lastUserName,
     } // деструктуризация пропсов
 ) => {
-    const inputClass = error ? s.errorInput : '' // need to fix with (?:)
-
+    const inputClass = error ? s.errorInput : s.input // need to fix with (?:)
+    console.log(totalUsers)
     return (
         <div id={'hw3-form'} className={s.greetingForm}>
-            <div className={s.text}>
+            <div className={totalUsers > 0 ? s.text : s.textDisabled}>
                 {'Людей добавили: '}
                 <span id={'hw3-users-total'}>
                     {totalUsers}

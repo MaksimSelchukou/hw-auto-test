@@ -1,17 +1,18 @@
-import React, { FC, ReactNode, useEffect, useState } from 'react'
-import { Header } from '../header/Header'
-import { Sidebar } from '../sidebar/Sidebar'
+import React, {FC, ReactNode, useEffect, useState} from 'react'
+import {Header} from '../header/Header'
+import {Sidebar} from '../sidebar/Sidebar'
 
 type PropsType = {
     children?: ReactNode
+
 }
 
-export const Layout: FC<PropsType> = ({ children }) => {
+export const Layout: FC<PropsType> = ({children}) => {
     const [open, setOpen] = useState(false)
     const handleClose = () => setOpen(false)
     const handleOpen = () => {
-        setOpen(true)
-        // console.log('open')
+        setOpen(!open)
+        console.log('open')
     }
 
     useEffect(() => {
@@ -21,8 +22,8 @@ export const Layout: FC<PropsType> = ({ children }) => {
 
     return (
         <>
-            <Sidebar open={open} handleClose={handleClose} />
-            <Header handleOpen={handleOpen} />
+            <Sidebar open={open} handleClose={handleClose}/>
+            <Header handleOpen={handleOpen} open={open}/>
             <div>
                 {/*страницы*/}
                 {children}
