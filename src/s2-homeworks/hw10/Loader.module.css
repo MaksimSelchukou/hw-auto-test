@@ -1,3 +1,8 @@
 .loader {
     /*свг и/или анимация*/
+    height: 300px;
+    width: 300px;
+    background-image: url('../../images/my-loader.svg') ;
+    background-repeat: no-repeat;
 }
+
