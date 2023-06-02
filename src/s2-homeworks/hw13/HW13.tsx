@@ -46,8 +46,9 @@ const HW13 = () => {
                 debugger
                 setCode(`Код ${e.response.status}`)
                 setImage(e.response.status ? e.response.status === 500 ? error500 : error400 : errorUnknown)
-                setText(e.response.data.errorText)
-                setInfo(e.response.data.info)
+                setText(e.response.data?.errorText ? e.response.data.errorText : e.message)
+                setInfo(e.response.data?.info || 'Network Error обычно обозначает...')
+                debugger
                 // дописать
 
             })
