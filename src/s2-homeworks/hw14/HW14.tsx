@@ -54,8 +54,7 @@ const HW14 = () => {
         debugger
         // добавить/заменить значение в квери урла
         // setSearchParams(
-        setSearchParams(value)
-        sendQuery(value)
+        setSearchParams({find: value})
         //
     }
 
