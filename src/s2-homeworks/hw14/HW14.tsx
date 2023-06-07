@@ -16,7 +16,8 @@ import {useSearchParams} from 'react-router-dom'
 const getTechs = (find: string) => {
     return axios
         .get<{ techs: string[] }>(
-            'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test2',
+            'https://samurai.it-incubator.io/api/3.0/homework/test2',
+
             {params: {find}}
         )
         .catch((e) => {
@@ -25,15 +26,20 @@ const getTechs = (find: string) => {
 }
 
 const HW14 = () => {
+    console.log('1.Попали в hw14')
+    debugger
     const [find, setFind] = useState('')
     const [isLoading, setLoading] = useState(false)
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<string[]>([])
-
+    debugger
     const sendQuery = (value: string) => {
         setLoading(true)
         getTechs(value)
-            .then((res) => {
+            .then((res: any) => {
+                debugger
+                setTechs(res.data.techs)
+                setLoading(false)
                 // делает студент
 
                 // сохранить пришедшие данные
@@ -45,17 +51,21 @@ const HW14 = () => {
     const onChangeText = (value: string) => {
         setFind(value)
         // делает студент
-
+        debugger
         // добавить/заменить значение в квери урла
         // setSearchParams(
-
+        setSearchParams(value)
+        sendQuery(value)
         //
     }
 
     useEffect(() => {
+        debugger
+        console.log('2.Попали в useEffect')
         const params = Object.fromEntries(searchParams)
         sendQuery(params.find || '')
         setFind(params.find || '')
+        debugger
     }, [])
 
     const mappedTechs = techs.map(t => (
